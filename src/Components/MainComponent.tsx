@@ -20,11 +20,11 @@ const mapDispatchToProps = (dispatch: (arg0: any | null) => void) => ({
 function Selects(props: { selectNumberOne: any, selectNumberTwo: any, numbers: State }) {
     return (
         <>
-            <div className="">
+            <div className="z-40">
                 <Select receiving={true} selectNumberOne={props.selectNumberOne} selectNumberTwo={props.selectNumberTwo} numbers={props.numbers} />
             </div>
             {props.numbers.first ?
-                <div className="mt-2">
+                <div className="mt-2 z-10">
                     <Select receiving={false} selectNumberOne={props.selectNumberOne} selectNumberTwo={props.selectNumberTwo} numbers={props.numbers} />
                 </div> : null}
         </>
@@ -45,7 +45,7 @@ class Main extends Component<Props> {
                             </div>
                             {this.props.numbers.first ?
                                 <div className="appear flex items-center justify-center ">
-                                    <button onClick={this.props.invert} type="button" className="py-2 px-4 group  text-sm font-small rounded-l-lg rounded-r-md border border-blue-900 hover:bg-blue-600 hover:text-white focus:z-10 focus:ring-2 focus:ring-blue-200 focus:bg-blue-700 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-blue-600 dark:focus:bg-blue-700">
+                                    <button onClick={this.props.invert} type="button" className="py-2 px-4 group  z-0 text-sm font-small rounded-l-lg rounded-r-md border border-blue-900 hover:bg-blue-600 hover:text-white focus:ring-2 focus:ring-blue-200 focus:bg-blue-700 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-blue-600 dark:focus:bg-blue-700">
                                         <RefreshIcon className="h-5 w-5 text-gray-400 group-focus:text-gray-100 group-hover:text-gray-100" aria-hidden="true" />
                                     </button>
                                 </div> : null}

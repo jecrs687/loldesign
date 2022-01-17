@@ -13,8 +13,8 @@ const list = (value: string, index: number) => (<Listbox.Option
     key={index}
     className={(target: { active: boolean }) =>
         classNames(
-            target.active ? 'text-white bg-indigo-600' : 'text-gray-900',
-            'cursor-default select-none relative py-2 pl-3 pr-9'
+            target.active ? 'text-white bg-indigo-600 ' : 'text-gray-900',
+            'cursor-default select-none relative py-2 pl-3 pr-9 '
         )
     }
     value={value}
@@ -32,8 +32,8 @@ const list = (value: string, index: number) => (<Listbox.Option
             {selected ? (
                 <span
                     className={classNames(
-                        active ? 'text-white' : 'text-indigo-600',
-                        'absolute inset-y-0 right-0 flex items-center pr-4'
+                        active ? 'text-white ' : 'text-indigo-600',
+                        'absolute inset-y-0 right-0 flexitems-center pr-4'
                     )}
                 >
                     <CheckIcon className="h-5 w-5" aria-hidden="true" />
@@ -49,9 +49,9 @@ export function Select(props: { receiving: boolean, selectNumberOne: any, select
         <Listbox value={props.receiving ? props.numbers.first : props.numbers.second} onChange={props.receiving ? props.selectNumberOne : props.selectNumberTwo}>
             {({ open }) => (
                 <>
-                    <Listbox.Label className="block text-base font-medium text-gray-700">{props.receiving ? "Seu DDD:" : "DDD do outro número:"}<span className='text-red-500'>*</span></Listbox.Label>
+                    <Listbox.Label className="block text-base font-medium text-gray-700 z-0">{props.receiving ? "Seu DDD:" : "DDD do outro número:"}<span className='text-red-500'>*</span></Listbox.Label>
                     <div className="mt-1 relative">
-                        <Listbox.Button className="relative w-full bg-white border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-pointer focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <Listbox.Button className="relative w-full  bg-white border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-pointer focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             <span className="flex items-center">
                                 {
                                     (props.receiving ? props.numbers.first : props.numbers.second) ?
@@ -73,7 +73,7 @@ export function Select(props: { receiving: boolean, selectNumberOne: any, select
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0"
                         >
-                            <Listbox.Options className="absolute mt-1 w-full bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
+                            <Listbox.Options className="absolute mt-1 w-full z-30 bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
                                 {
                                     () => {
                                         if (props.receiving) {
