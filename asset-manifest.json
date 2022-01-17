@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/loldesign/static/css/main.81d7fb5a.css",
+    "main.js": "/loldesign/static/js/main.5a32aa0d.js",
+    "static/js/787.fa372fbc.chunk.js": "/loldesign/static/js/787.fa372fbc.chunk.js",
+    "index.html": "/loldesign/index.html",
+    "main.81d7fb5a.css.map": "/loldesign/static/css/main.81d7fb5a.css.map",
+    "main.5a32aa0d.js.map": "/loldesign/static/js/main.5a32aa0d.js.map",
+    "787.fa372fbc.chunk.js.map": "/loldesign/static/js/787.fa372fbc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81d7fb5a.css",
+    "static/js/main.5a32aa0d.js"
+  ]
+}
